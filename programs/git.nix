@@ -1,15 +1,15 @@
 {
     enable = true;
-    userName = "cor";
-    userEmail = "cor@pruijs.dev";
+    userName = "kkast";
+    userEmail = "kkastsevich@gmail.com";
     lfs.enable = true;
     signing = {
       signByDefault = true;
-      key = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIAN0JRbnTsz4eEUeL6My/ew+rX3Qojawn+Y1B3buPuyC";
+      key = "";
     };
     extraConfig = {
       color.ui = true;
-      github.user = "cor";
+      github.user = "kkast";
       gpg.format = "ssh";
     };
   }

@@ -1,5 +1,5 @@
 {
-  description = "NixOS systems and tools by cor";
+  description = "NixOS systems and tools by kkast";
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/release-22.11";
@@ -29,7 +29,7 @@
   outputs = { self, darwin, nixpkgs, home-manager, flake-utils, ... }@inputs:
     let 
       mkVM = import ./lib/mkvm.nix; 
-      user = "cor";
+      user = "kkast";
       overlays = [];
     in
     {
@@ -56,13 +56,13 @@
           modules = [ 
             ./darwin-configuration.nix 
             home-manager.darwinModules.home-manager {
-              users.users.cor = {
-                name = "cor";
-                home = "/Users/cor";
+              users.users.kkast = {
+                name = "kkast";
+                home = "/Users/kkast";
               };
               home-manager.useGlobalPkgs = true;
               home-manager.useUserPackages = true;
-              home-manager.users.cor = import ./home-darwin.nix;
+              home-manager.users.kkast = import ./home-darwin.nix;
     	        home-manager.extraSpecialArgs = { inherit inputs; };
             }
           ];

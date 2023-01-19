@@ -1,7 +1,7 @@
 # Connectivity info for Linux VM
 NIXADDR ?= unset
 NIXPORT ?= 22
-NIXUSER ?= cor
+NIXUSER ?= kkast
 
 # The block device prefix to use.
 #   - sda for SATA/IDE

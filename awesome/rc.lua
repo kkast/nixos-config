@@ -45,7 +45,7 @@ end
 
 -- {{{ Variable definitions
 -- Themes define colours, icons, font and wallpapers.
-beautiful.init("/home/cor/.config/awesome/theme.lua")
+beautiful.init("/home/kkast/.config/awesome/theme.lua")
 
 -- This is used later as the default terminal and editor to run.
 terminal = "kitty"
@@ -282,7 +282,7 @@ awful.screen.connect_for_each_screen(function(s)
             -- filters out the first one in the document
             -- and shows it without the - [ ]
             wibox.container.margin(awful.widget.watch([[
-                bash -c "cat `ls -d /home/cor/omega/Journal/*.* | tac | head -n 1` | grep --color=never -e '- \\[ \\]' | head -n 1 | cut -c 7-"
+                bash -c "cat `ls -d /home/kkast/omega/Journal/*.* | tac | head -n 1` | grep --color=never -e '- \\[ \\]' | head -n 1 | cut -c 7-"
             ]], 10), 12, 12, 6, 6),
             wibox.container.margin(wibox.widget.systray(), 12, 12, 6, 6),
             wibox.container.margin(mytextclock, 12, 24, 6, 6),

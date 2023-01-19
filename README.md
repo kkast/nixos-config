@@ -4,7 +4,7 @@ I use NixOS inside of a Parallels VM on a M1 Mac running macOS. In addition to t
 
 ## How to fork this configuration for your own usage
 
-1. Do a project-wide search of my username, `cor` and replace it with `your_username`. Be careful not to replace things that are not my username, such as "core".
+1. Do a project-wide search of my username, `kkast` and replace it with `your_username`. Be careful not to replace things that are not my username, such as "core".
 2. In `./nixos.nix`, replace the value of `hashedPassword` with one you've generated with `mkpasswd -m sha-512` [See here for more info](https://search.nixos.org/options?channel=22.05&show=users.users.%3Cname%3E.hashedPassword&from=0&size=50&sort=relevance&type=packages&query=users.users.%3Cname%3E.hash).
 3. In `./programs/git.nix`, change `userName` and `extraConfig.github.user` to your GitHub username. Also change `signing.key` to the public GPG key you use for your GitHub account.
 
@@ -16,7 +16,7 @@ I use NixOS inside of a Parallels VM on a M1 Mac running macOS. In addition to t
 
 1. Do a clean install macOS, deny analytics.
 2. Install `Nix` on macOS with [the installer](https://nixos.org/download.html#nix-install-macos)
-3. In ~, execute `nix-shell -p git --command "git clone https://github.com/cor/nixos-config"`
+3. In ~, execute `nix-shell -p git --command "git clone https://github.com/kkast/nixos-config"`
 4. Install `nix-darwin` with [the nix-darwin installer](https://github.com/LnL7/nix-darwin).
 5. Restart **Terminal.app**
 6. `sudo mv /etc/nix/nix.conf /etc/nix/nix.conf.original`
@@ -61,7 +61,7 @@ I use NixOS inside of a Parallels VM on a M1 Mac running macOS. In addition to t
 16. On your Mac, in the same shell, type `make vm/secrets`. 
 17. Reboot your VM by typing `reboot`.
 18. Log into your VM
-19. In `~`, run `git clone git@github.com:cor/nixos-config`
+19. In `~`, run `git clone git@github.com:kkast/nixos-config`
 20. Enter your SSH password (stored in 1Password)
 21. Run `cd nixos-config && make switch`
 22. `reboot`
